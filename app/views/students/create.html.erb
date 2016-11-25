@@ -1,0 +1,15 @@
+<h1>YaY i got first output in rails application!!!!!</h1>
+
+<div class = "data">
+<%= @data %>
+Name : <%=  @name %><br />
+Age :<%=  @age %>
+</div>
+
+<%= form_tag do %>
+	<p>Name: <%= text_field_tag 'name' %> </p> 
+
+	<p>Age : <%= text_field_tag 'age' %></p>
+
+	<p><%= submit_tag %></p>
+<% end %>

@@ -1,0 +1,9 @@
+<h1>
+	New Employee
+</h1>
+
+<%= form_tag employees_create_path do %>
+	<p>Enter Name : <%= text_field_tag :name %> </p>
+	<p>Enter Age : <%= text_field_tag :age %></p>
+	<p><%= submit_tag "submit" %></p>
+<% end %>

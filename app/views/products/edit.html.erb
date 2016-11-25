@@ -1,0 +1,5 @@
+<h1>This edit page</h1>
+
+<%= form_for @product, url: {action: "update"} do |f| %>
+	<%= render 'form' , locals: {f: f} %>
+<% end %>

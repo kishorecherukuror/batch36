@@ -1,0 +1,10 @@
+<h1>Products#new</h1>
+<%= form_for @product, url: {action: "create"} do |f| %>
+	<div class="errors">
+		<% @product.errors %>
+		<% @product.errors.full_messages.each do |error| %>
+			<%= error %><br />
+		<% end %>
+	</div>
+	<%= render partial: 'form' , locals: { f: f } %>
+<% end %>
