@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  
+  resources :industries do
+    resources :sectors
+  end
   resources :users
   
 

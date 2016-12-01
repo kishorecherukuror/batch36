@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161124165533) do
+ActiveRecord::Schema.define(version: 20161201183838) do
 
   create_table "employees", force: :cascade do |t|
     t.string   "name"
@@ -20,10 +20,28 @@ ActiveRecord::Schema.define(version: 20161124165533) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "industries", force: :cascade do |t|
+    t.string   "name"
+    t.text     "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "industries_sectors", id: false, force: :cascade do |t|
+    t.integer "industry_id", null: false
+    t.integer "sector_id",   null: false
+  end
+
   create_table "products", force: :cascade do |t|
     t.string   "name"
     t.integer  "quatity"
     t.integer  "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sectors", force: :cascade do |t|
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

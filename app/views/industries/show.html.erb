@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @industry.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @industry.address %>
+</p>
+
+<p>
+	<strong>Sector:</strong>
+	<ul>
+		<% @industry.sectors.each do |sector| %>
+			<li><%= sector.name %></li>
+		<% end %>
+	</ul>
+</p>
+
+<%= link_to 'Edit', edit_industry_path(@industry) %> |
+<%= link_to 'Back', industries_path %>
